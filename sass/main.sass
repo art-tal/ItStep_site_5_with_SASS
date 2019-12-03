@@ -1,0 +1,162 @@
+@import "bourbon/bourbon"
+
+
+$color_red: #CB0E17
+
+@mixin button_red
+	background-color: $color_red
+	border: none
+	color:#fff
+	box-shadow: 0 0 3px 3px #aaa
+	text-transform: uppercase
+	padding: 12px 42px
+	font-size: 15px
+	border-radius: 3px
+	cursor: pointer
+	&:hover
+		background-color: darken($color_red, 5%)
+		text-shadow: 0 0 3px #ccc
+
+@mixin form_contact
+	border: 1px solid $color_red
+	background-color: #fff
+	padding: 55px 23px 29px
+	box-sizing: border-box
+
+
+body
+	font-family: "RobotoRegular", sans-serif
+
+header
+	width: 100%
+	background-image: url(../img/lend1_bg.png)
+	background-repeat: no-repeat
+	background-position: 0 0
+	background-size: 100%
+
+	.container
+		width: 1170px
+		margin: 0 auto
+		padding-top: 30px
+		padding-bottom: 60px
+		display: grid
+		grid-template-columns: 20fr 11fr
+
+		.logo
+			width: 175px
+			height: 216px
+			background-image: url(../img/logo.png)
+			background-repeat: no-repeat
+			background-size: 100%
+			background-position: 0 0
+
+		.wrap
+			text-align: right
+			.lang
+				float: right
+				width: 260px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: space-between
+				a
+					color: #ccc
+					font-size: 18px
+					font-family: 'Roboto-Light', sans-serif
+					text-decoration: none
+					&.activ_lang, &:hover
+						font-family: 'Roboto-Bold', sans-serif
+						color: #fff
+
+			.contact_block
+				margin-top: 40px
+				font-family: "RobotoRegular", sans-serif
+				h2
+					font-size: 25px
+					color: #fff
+					text-transform: uppercase
+					letter-spacing: -1.2px
+				p.contacts
+					color: $color_red
+					margin-top: 21px
+					font-size: 20px
+					&:first-line
+						font-size: 35px
+						line-height: 51px
+				button
+					@include button_red
+					margin-top: 27px
+			
+		.technology
+			h3
+				font-family: 'Roboto-Light', sans-serif
+				font-size: 30px
+				line-height: 45px
+				color: $color_red
+				&:first-line
+					font-family: 'Roboto-Bold', sans-serif
+					font-size: 22px
+					text-transform: uppercase
+			h1
+				font-size: 50px
+				line-height: 51px
+				margin-top: 10px
+				font-family: 'Roboto-Bold', sans-serif
+				text-transform: uppercase
+				color: $color_red
+			.our_advantages
+				margin-top: 100px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: space-around
+				flex-wrap: wrap
+
+
+				.item
+					width: 33.3%
+					text-align: center
+					font-size: 18px
+					margin-top: 28px
+					p
+						margin-top: 14px
+		form
+			@include form_contact
+			font-family: 'Roboto-Light', sans-serif
+			width: 284px
+			margin: 68px auto 0
+			p
+				font-size: 15px
+				line-height: 20px
+				color: #777
+				margin-bottom: 30px
+			h3
+				font-size: 22px
+				color: $color_red
+				margin-bottom: 34px
+			input
+				border: 1px solid #808080
+				border-radius: 2px
+				padding: 15px
+				padding-left: 30px
+				font-size: 14px
+				width: 100%
+				box-sizing: border-box
+				margin-bottom: 7px
+				&::-webkit-input-placeholder,
+				&::-moz-placeholder,
+				&:-moz-placeholder,
+				&-ms-input-placeholder,
+					background-image: url(../img/arrow_next.png)
+					background-repeat: no-repeat
+					background-position: 15px 50%
+			button
+				margin-top: 36px
+				width: 100%
+				@include button_red
+				padding-left: 10px
+				padding-right: 10px
