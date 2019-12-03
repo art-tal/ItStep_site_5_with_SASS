@@ -27,6 +27,10 @@ $color_red: #CB0E17
 body
 	font-family: "RobotoRegular", sans-serif
 
+.container
+	width: 1170px
+	margin: 0 auto
+
 header
 	width: 100%
 	background-image: url(../img/lend1_bg.png)
@@ -35,10 +39,10 @@ header
 	background-size: 100%
 
 	.container
-		width: 1170px
-		margin: 0 auto
+		// width: 1170px
+		// margin: 0 auto
 		padding-top: 30px
-		padding-bottom: 60px
+		padding-bottom: 36px
 		display: grid
 		grid-template-columns: 20fr 11fr
 
@@ -160,3 +164,22 @@ header
 				@include button_red
 				padding-left: 10px
 				padding-right: 10px
+
+///////////NAV//////////////
+
+nav
+	padding: 20px 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	a
+		margin-left: 60px
+		color: #555
+		text-decoration: none
+		font-size: 15px
+		&.active, &:hover
+			color: $color_red
