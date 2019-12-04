@@ -3,6 +3,13 @@
 
 $color_red: #CB0E17
 
+@mixin background ($image)
+	background-image: $image
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+
+
 @mixin button_red
 	background-color: $color_red
 	border: none
@@ -54,14 +61,8 @@ body
 
 header
 	width: 100%
-	background-image: url(../img/lend1_bg.png)
-	background-repeat: no-repeat
-	background-position: 0 0
-	background-size: 100%
-
+	@include background (url(../img/lend1_bg.png))
 	.container
-		// width: 1170px
-		// margin: 0 auto
 		padding-top: 30px
 		padding-bottom: 36px
 		display: grid
@@ -140,8 +141,6 @@ header
 				display: flex
 				justify-content: space-around
 				flex-wrap: wrap
-
-
 				.item
 					width: 33.3%
 					text-align: center
@@ -165,22 +164,6 @@ header
 				margin-bottom: 34px
 			input
 				@include input
-				// border: 1px solid #808080
-				// border-radius: 2px
-				// padding: 15px
-				// padding-left: 30px
-				// font-size: 14px
-				// width: 100%
-				// box-sizing: border-box
-				// margin-bottom: 7px
-
-				// &::-webkit-input-placeholder,
-				// &::-moz-placeholder,
-				// &:-moz-placeholder,
-				// &-ms-input-placeholder,
-				// 	background-image: url(../img/arrow_next.png)
-				// 	background-repeat: no-repeat
-				// 	background-position: 15px 50%
 			button
 				margin-top: 36px
 				width: 100%
@@ -216,10 +199,7 @@ main
 		margin: 0
 
 	.lend_2
-		background-image: url(../img/lend2_bg.png)
-		background-repeat: no-repeat
-		background-size: 100%
-		background-position: 50% 50%
+		@include background (url(../img/lend2_bg.png))
 		color: rgba(170, 170, 170, 0.7)
 		font-family: 'Roboto-Light', sans-serif
 		font-size: 20px
@@ -355,10 +335,7 @@ section[name="lend_5"]
 	//////////.lend_6///////////
 
 section.lend_6
-	background-image: url(../img/lend3_bg.png)
-	background-repeat: no-repeat
-	background-position: 50% 50%
-	background-size: cover
+	@include background (url(../img/lend3_bg.png))
 	padding-bottom: 59px
 	.carousel
 		padding: 125px 194px 135px
@@ -461,3 +438,75 @@ section.lend_7
 				color: #333
 				margin-bottom: 60px
 
+	//////////.lend_8///////////
+
+section.lend_8
+	@include background (url(../img/lend4.png))
+	.container
+		padding: 60px 0
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		.photo
+			flex-basis: 2
+			padding-right: 11px
+			display: grid
+			grid-template-columns: repeat(256px, 3)
+			grid-template-rows: repeat(256px, 3)
+			grid-gap: 1px
+			img
+				width: 256px
+				height: 256px
+				&:first-child
+					grid-column: 1/3
+					grid-row: 1/2
+					width: 513px
+				&:nth-child(2)
+					grid-column: 3/4
+					grid-row: 1/2
+				&:nth-child(3)
+					grid-column: 1/2
+					grid-row: 2/3
+				&:nth-child(4)
+					grid-column: 2/3
+					grid-row: 2/4
+					height: 513px
+				&:nth-child(5)
+					grid-column: 3/4
+					grid-row: 2/3
+				&:nth-child(6)
+					grid-column: 1/2
+					grid-row: 3/4
+				&:last-child
+					grid-column: 3/4
+					grid-row: 3/4
+		.causes
+			flex-basis: 1
+			padding-left: 48px
+			header
+				background: none
+				h1
+					font-family: 'Roboto-Light', sans-serif
+					font-size: 35px
+					color: $color_red
+					margin-bottom: 45px
+					&:first-line
+						font-size: 50px
+			h3
+				font-size: 20px
+				margin-bottom: 40px
+			form
+				@include form_contact
+				padding-top: 86px
+				h2
+					font-family: 'Roboto-Light', sans-serif
+					font-size: 20px
+					color: $color_red
+					margin-bottom: 77px
+				input
+					@include input
+				button
+					@include button_red
+					margin-top: 36px
