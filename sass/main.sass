@@ -36,6 +36,13 @@ $color_red: #CB0E17
 	width: 100%
 	box-sizing: border-box
 	margin-bottom: 7px
+	&::-webkit-input-placeholder,
+	&::-moz-placeholder,
+	&:-moz-placeholder,
+	&-ms-input-placeholder,
+		background-image: url(../img/arrow_next.png)
+		background-repeat: no-repeat
+		background-position: 15px 50%
 
 
 body
@@ -166,13 +173,14 @@ header
 				// width: 100%
 				// box-sizing: border-box
 				// margin-bottom: 7px
-				&::-webkit-input-placeholder,
-				&::-moz-placeholder,
-				&:-moz-placeholder,
-				&-ms-input-placeholder,
-					background-image: url(../img/arrow_next.png)
-					background-repeat: no-repeat
-					background-position: 15px 50%
+
+				// &::-webkit-input-placeholder,
+				// &::-moz-placeholder,
+				// &:-moz-placeholder,
+				// &-ms-input-placeholder,
+				// 	background-image: url(../img/arrow_next.png)
+				// 	background-repeat: no-repeat
+				// 	background-position: 15px 50%
 			button
 				margin-top: 36px
 				width: 100%
@@ -204,6 +212,9 @@ main
 	width: 100%
 	//////////.lend_2///////////
 	
+	hr
+		margin: 0
+
 	.lend_2
 		background-image: url(../img/lend2_bg.png)
 		background-repeat: no-repeat
@@ -341,3 +352,70 @@ section[name="lend_5"]
 				font-family: 'Roboto-Bold', sans-serif
 				font-size: 25px
 
+	//////////.lend_6///////////
+
+section.lend_6
+	background-image: url(../img/lend3_bg.png)
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: 100%
+	padding-bottom: 59px
+	.carousel
+		padding: 125px 194px 135px
+		h4
+			font-size: 25px
+			color: $color_red
+			margin-bottom: 28px
+		p
+			font-size: 18px
+			line-height: 1.2
+	form
+		@include form_contact
+		width: 85%
+		margin: auto
+		font-family: 'Roboto-Light', sans-serif
+		padding: 42px 40px 42px 52px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		.header
+			flex-basis: 40%
+			h3
+				font-size: 22px
+				color: $color_red
+				margin-bottom: 35px
+				line-height: 24px
+			p
+				color: #555
+				font-size: 15px
+				line-height: 26px
+		.fieldset
+			flex-basis: 30%
+			input
+				@include input
+				&:last-child
+					margin-bottom: 0
+		.send
+			flex-basis: 30%
+			align-self: flex-end
+			padding-left: 27px
+			label
+				display: block
+				width: 135px
+				box-sizing: border-box
+				color: $color_red
+				font-size: 14px
+				font-family: "RobotoRegular", sans-serif
+				background-image: url(../img/arrow_next.png)
+				background-repeat: no-repeat
+				background-position: right 50%
+				padding-right: 30px
+				margin: 0 auto
+				margin-bottom: 73px
+			input
+				display: none
+			button
+				@include button_red
+				width: 100%
