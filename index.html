@@ -79,8 +79,8 @@
 					Нужен срочный перевод контракта или делового письма? Переговоры с иностранными партнерами перенесли на сегодняшний вечер, а под рукой нет переводчика?
 				</p>
 				<h3>Решите задачу суйчас:</h3>
-				<input type="text" placeholder="Введите имя:">
-				<input type="tel" placeholder="Введите телефон:">
+				<input type="text" placeholder="Введите имя:" pattern="[A-Za-z]{2,}">
+				<input type="tel" placeholder="Введите телефон:" pattern="+[0-9]{2}([0-9]{3}) [0-9]{3} [0-9]{2} [0-9]{2}">
 				<button>Нужен срочный перевод</button>
 			</form>
 		</div>
@@ -185,8 +185,8 @@
 						<p>Загрузите необходимый файл, и наши специалисты<br>сообщат вам ответ в течение 5 минут.</p>
 					</div>
 					<div class="fieldset">
-						<input type="text" placeholder="Введите имя">
-						<input type="tel" placeholder="Введите телефон">
+						<input type="text" placeholder="Введите имя" pattern="[A-Z]{2,}">
+						<input type="tel" placeholder="Введите телефон" pattern="+[0-9]{2}([0-9]{3}) [0-9]{3} [0-9]{2} [0-9]{2}">
 						<input type="email" placeholder="Введите e-mail">
 					</div>
 					<div class="send">
@@ -266,14 +266,48 @@
 					<h3>В Eclipse вам подберут<br>квалифицированного переводчика<br>для любой ситуации</h3>
 					<form action="#" method="post" name="proposition">
 						<h2>Мы предложим вам лучшее решение для вашей задачи:</h2>
-						<input type="text" placeholder="Введите имя:">
-						<input type="tel" placeholder="Введите телефон:">
+						<input type="text" placeholder="Введите имя:" pattern="[A-Za-z]{2}">
+						<input type="tel" placeholder="Введите телефон:" pattern="+[0-9]{2}([0-9]{3}) [0-9]{3} [0-9]{2} [0-9]{2}">
 						<input type="email" placeholder="Введите e-mail:">
 						<button>Заказать устный перевод</button>
 					</form>
 				</div>
 			</div>
 		</section>
+
+		<section class="lend_9 container">
+			<header>
+				<h1>Наши<br>устные<br><span>переводчики</span><h1>
+				<p>Это лишь некоторые<br>из наших лучших сотрудников:</p>
+			</header>
+
+			<div class="carousel">
+				<div class="person">
+					<img src="img/alexey.png" alt="alexey">
+					<p>Алексей</p>
+					<span>Китайский язык</span>
+				</div>
+				<div class="person">
+					<img src="img/renat.png" alt="renat">
+					<p>Ренат</p>
+					<span>Английский, турецкий язык</span>
+				</div>
+				<div class="person">
+					<img src="img/elisabet.png" alt="elisabet">
+					<p>Елизавета</p>
+					<span>Немецкий язык</span>
+				</div>
+				<div class="person">
+					<img src="img/evgen.png" alt="evgen">
+					<p>Евгений</p>
+					<span>Португальский язык</span>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		
 
 
 	</main>
