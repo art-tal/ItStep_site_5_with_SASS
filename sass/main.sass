@@ -592,6 +592,7 @@ section.lend_10
 
 section.lend_11
 	@include background(url(../img/map.png))
+	border-top: 1px solid $color_red
 	padding-top: 32px
 	padding-bottom: 32px
 	.container
@@ -637,3 +638,45 @@ section.lend_11
 				@include button_red
 				width: 100%
 				margin-top: 35px
+
+//////////FOOTER/////////////
+
+footer
+	background-color: $color_red
+	.container
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.brand_name
+			color: #fff
+			font-size: 20px
+			line-height: 36px
+		.social
+			a
+				display: inline-block
+				width: 20px
+				height: 20px
+				border-radius: 50%
+				&:first-child
+					@include background (url(../img/icon_vk.png))
+				&:nth-child(2)
+					@include background (url(../img/icon_facebook.png))
+				&:nth-child(3)
+					@include background (url(../img/icon_twitter.png))
+				&:nth-child(4)
+					@include background (url(../img/icon_google+.png))
+				&:last-child
+					@include background (url(../img/icon_classmates.png))
+		.develop
+			span
+				color:#fff
+				font-family: 'Roboto-Light', sans-serif
+				font-size: 12px
+				vertical-align: top
+				line-height: 25px
+			img
+				margin-left: 14px
