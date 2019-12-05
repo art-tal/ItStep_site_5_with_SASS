@@ -587,3 +587,53 @@ section.lend_10
 		@include button_red
 		margin: 0 auto
 		display: block
+
+	//////////.lend_11///////////
+
+section.lend_11
+	@include background(url(../img/map.png))
+	padding-top: 32px
+	padding-bottom: 32px
+	.container
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		.contact
+			flex-basis: 66%
+			text-align: right
+			padding-top: 258px
+			color: $color_red
+			h1
+				font-family: 'Roboto-Medium', sans-serif
+				font-size: 25px
+			h2
+				font-size: 22px
+				margin-bottom: 20px
+			p
+				font-size: 22px
+				line-height: 25px
+		form
+			flex-basis: 33%
+			margin-left: 28px
+			margin-right: 108px
+			@include form_contact
+			header
+				background: none
+				h1
+					font-family: 'Roboto-Medium', sans-serif
+					font-size: 25px
+					color: #333
+					margin-bottom: 25px
+			p
+				font-family: 'Roboto-Light', sans-serif
+				font-size: 20px
+				color: $color_red
+				margin-bottom: 25px
+			input, textarea
+				@include input
+			button
+				@include button_red
+				width: 100%
+				margin-top: 35px
